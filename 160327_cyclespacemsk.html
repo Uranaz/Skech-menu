@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'/>
+  <title>Cyclespace Moscow</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.16.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.16.0/mapbox-gl.css' rel='stylesheet' />
+  <link rel="stylesheet" type="text/css" href="160327_style.css"/>
+</head>
+<body>
+  <!--Header-->
+  <div id=header>
+    <div id=hleft>
+      <div id=logo>
+        <img src="160327_logo.svg"/>
+      </div>
+      <h3 id=name>Velomarshruti</h3>
+    </div>
+    <div id=hright>
+      <a href="https://www.facebook.com/cyclespacemsk/" target="_blank" title="gruppa na facebook">
+        <img src="F_logo_24.svg"/>
+      </a>
+      <a href="https://vk.com/cyclespacemsk" target="_blank" title="gruppa vkontakte">
+        <img src="B_logo_24.svg"/>
+      </a>
+    </div>
+    <h4 id=about>About</h4>
+  </div>
+  <!--Layers-->
+  <div id=layers>
+    <ul id=year>
+      <li class=year><strong>2015</strong> Marsruty vdol' metro</li>
+        <ul id=route>
+          <li id=kr>Kaluzsko-Rizskiy</li>
+          <li id=so>Sokol'niceskiy</li>
+          <li id=ap>Arbatsko-pokrovskiy</li>
+          <li id=ka>Kalininskiy</li>
+          <li id=tk>Tagansko-Krasnopresnenskiy</li>
+          <li id=lu>Lublinskiy</li>
+          <li id=za>Zamoskvoreckiy</li>
+          <li id=st>Serpuhovsko-Timiryazevskiy</li>
+        </ul>
+      <li class=year><strong>2016</strong> Svyazi mezdu rayonami</li>
+    </ul>
+  </div>
+  <!--About text-->
+  <div id=abouttext></div>
+  <div id=legend>
+    <img src="legend.svg"/>
+  </div>
+  <!--Map-->
+  <div id='map'></div>
+  <script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoidXJhbmF6IiwiYSI6ImNpaTM1Y29pdjAwMnd2bm0yMjhvN2R5YWQifQ.0lB3sz08vtttzGY6t-cPcw';
+  var map = new mapboxgl.Map({
+      container: 'map', // container id
+      style: 'mapbox://styles/uranaz/cimulaofe00948sko9gg05fjp', //stylesheet location
+      center: [37.566494,55.746784], // starting position
+      zoom: 11 // starting zoom
+  });
+</script>
+
+</body>
+</html>
